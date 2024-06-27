@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=62.0"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "nicolson.scot"
+version = "0.1.0"
+description = "Website code for nicolson.scot"
+authors = [
+  { name = "Cameron Nicolson", email = "code.cameron@nicolson.scot" },
+]
+license = { text="AGPL-3.0" }
+requires-python = ">=3.6"
+dependencies = [
+  "daphne==4.0.0",
+  "channels[daphne]==4.0.0",
+  "dj-database-url==2.1.0",
+  "python-dotenv==1.0.0",
+  "psycopg==3.1.15",
+  "django-blog-improved @ git+https://github.com/cameronnicolson/django-blog-improved.git",
+]
+[tool.setuptools.packages.find]
+include = ["config", "staticfiles"]
+namespaces = false
